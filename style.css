@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family= Lexend:wght@100;200;300;400 & display =swap');
+
+
+/* CSS styles */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .column {
+    flex: 1 1 100%;
+  }
+  
+  /* Optional: Adjust these styles to your liking */
+  
+  .column h2 {
+    margin: 30px;
+  }
+  
+  /* SVG styles */
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    position: relative;
+    width: 50%;
+    margin-bottom: 30px
+  }
+
+  
+  .form-group-radio-btn {
+    position: relative;
+    width: 50%;
+    margin-bottom: 30px
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+    position: relative;
+    line-height: 4ex;
+  }
+
+  input[type="number"]{
+    width: 38%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+    position: relative;
+    line-height: 4ex;
+  }
+   
+  
+  
+  .form-group label {
+    position: absolute;
+    top: -6.5px;
+    left: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+    background-color: white;
+    z-index: 1;
+  }
+
+  .form-group-radio-btn label {
+    position: absolute;
+    top: -6.5px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  
+  .password-recovery {
+    display: flex;
+    justify-content: flex-end;
+    width: 70%;
+    margin-top: -10px;
+  }
+  
+  .password-recovery a {
+    text-decoration: none;
+    color: #1C1C1E;
+  }
+  
+  input[type="submit"] {
+    width: 100%; /* Set the button width to 70% */
+    height: 40px; /* Set the button height */
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .additional-row {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .additional-row div {
+    padding: 10px;
+    border-radius: 0.75rem;
+  }
+  .separator-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    margin: 20px 0;
+    position: relative;
+  }
+  
+  .separator {
+    flex-grow: 1;
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 0 10px;
+  }
+  
+  .separator-text {
+    color: #999;
+  
+  }
+  
+  .form-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 22px;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 1px solid #000;
+  }
+  
+  .form-button.blue {
+    background-color: #C7C7CC;
+    color: #3A3A3C;
+    border: none;
+  }
+  
+  
+  
+  .column .terms-service {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .terms-service a {
+    color: #000;
+  }
+  
+  
+  div.form-group a.form-button {
+    width: 94%;
+  }
+  
+  
+  a.form-button.lg {
+    width: 40%;
+    margin-bottom: 70px;
+  }
+  
+  .form-button:hover  {
+    background-color: #000;
+    color: #fff;
+  
+  }
+  
+  header {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  footer {
+    background-color: #1C1C1E;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-left img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .footer-right a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #FCFCFC;
+  }
+  
+  .footer-right a:first-child {
+    margin-left: 0;
+  }
+  .name-fields {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .name-field {
+    flex: 0 1 48%;
+    position: relative;
+  }
+  
+  .name-field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .title-fields {
+    display: flex;
+
+  }
+  
+
+  .title-fields label {
+    margin-right: 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .registration-heading {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .form-group-options label {
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .bullet-list-container li {
+    color: #636366;
+  }
+  
+  .bullet-list-container {
+    width: 70%;
+  }
+  
+  .bullet-list-container ul {
+    padding: 20px;
+  }
+  
+  invalid-feedback {
+    font-size: small;
+  }
+  
+  
+  
+  .form-group-input-validation {
+    display: flex;
+    color: var(--dark-gray-gray-6, #1C1C1E);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Lexend;
+    margin: 3px;
+  }
+  
+  
+  .terms-service-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-gray-gray-6, #1C1C1E);
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Lexend;
+    margin: 3px;
+  }
+  
+  .terms-service a {
+    margin-left: 5px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+
+  /* css acrescentado da página montadora */
+  
+  .configure-parts {
+     margin-bottom: 70px;
+     text-align: center;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 5px;
+  }
+
+
+  .upload-file {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+    justify-content: space-between;
+    
+  }
+
+  .group-file {
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid #D1D1D6;
+    padding: 10px;
+    width: 44%;
+
+  }
+
+ .group-file img {
+  margin-right: 15px;
+ }
+
+ .text-file {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: Lexend;
+ }
+
+ .registration-heading {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+
+ }
+
+ 

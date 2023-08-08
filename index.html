@@ -1,0 +1,234 @@
+<link rel="stylesheet" href="style.css">
+<header>
+    <img src="img/logo-black.svg">
+  </header>
+  
+  <div class="container">
+    <div class="column">
+      <div class="configure-parts">
+        <h4>Configure parts</h4>
+      </div>
+  
+      <form [formGroup]="userSignupForm" (ngSubmit)="onSubmit()">
+
+
+        <div class="form-group">
+          <h4 class="registration-heading">Add new file</h4>
+          <p class="name-fields">Or add new file and configure mannually your technical specification</p>
+          <div class="upload-file">
+        
+            <div class="group-file">
+              <img src="img/label.png" alt="" width="30px" height="30px">
+              <div class="text-file">
+                <h4>Drag and drop files here</h4>
+                <p>Size max: 1TB</p>
+              </div>
+            </div>
+            
+            <div class="group-file">
+              <img src="img/label.png" alt="" width="30px" height="30px">
+              <div class="text-file">
+                <h4>Drag and drop files here</h4>
+                <p>Size max: 1TB</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <div class="form-group-radio-btn">
+          <h4 class="registration-heading">Product manufacturing</h4>
+          <div class="title-fields">
+            <label>
+              <input type="checkbox" formControlName="title" value="car"> Car
+            </label>
+            <label>
+              <input type="checkbox" formControlName="title" value="truck"> Truck
+            </label>
+            <label>
+              <input type="checkbox" formControlName="title" value="bus"> Bus
+            </label>
+            <label>
+              <input type="checkbox" formControlName="title" value="motorcycle"> Motorcycle
+            </label>
+            <label>
+              <input type="checkbox" formControlName="title" value="racing car"> Racing Car
+            </label>
+          </div>
+          <div *ngIf="submitted && f.title.hasValidator(Validators.required) && f.title.invalid"
+          class="form-group-input-validation">
+            <img src="img/warning.svg" alt="">
+            <div style="margin-left: 5px;">
+              category is required</div>
+          </div>
+        </div>
+
+        <div class="form-group-radio-btn">
+          <h4 class="registration-heading">Select a part category</h4>
+          <div class="title-fields">
+            <label>
+              <input type="radio" formControlName="title" value="acessories"> Accessories
+            </label>
+            <label>
+              <input type="radio" formControlName="title" value="electrial"> Electrical
+            </label>
+            <label>
+              <input type="radio" formControlName="title" value="safety items"> Safety items
+            </label>
+            <label>
+              <input type="radio" formControlName="title" value="motor"> Motor
+            </label>
+            <label>
+              <input type="radio" formControlName="title" value="suspension"> Suspension
+            </label>
+          </div>
+          <div *ngIf="submitted && f.title.hasValidator(Validators.required) && f.title.invalid"
+          class="form-group-input-validation">
+            <img src="img/warning.svg" alt="">
+            <div style="margin-left: 5px;">
+              part category is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="name-fields">
+            <div class="name-field">
+              <label for="contact-number">ID</label>
+              <input type="text" id="contact-number" formControlName="contactNumber" required
+                     placeholder="US 12 1234 1234 1234567890 01">
+              <div *ngIf="submitted && f.contactNumber.hasValidator(Validators.required) && f.contactNumber.invalid"
+              class="form-group-input-validation" >
+                <img src="img/warning.svg" alt="">
+                <div style="margin-left: 5px;">id is required</div>
+              </div>
+            </div>
+            <div class="name-field">
+              
+              <label for="text">SKU</label>
+              <input type="text" id="text" formControlName="text" required placeholder="US 12 1234 1234 1234567890 01">
+              <div  *ngIf="submitted && f.password.errors && f.password.invalid"
+              class="form-group-input-validation">
+                <img src="img/warning.svg" alt="">
+                <div style="margin-left: 5px;">sku is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="text" formControlName="text" placeholder="Whell" required>
+          <label for="text">Part name</label>
+          <div *ngIf="submitted && f.email.hasValidator(Validators.required) && f.email.invalid"
+          class="form-group-input-validation" >
+            <img src="img/warning.svg" alt="">
+            <div  style="margin-left: 5px;">part name is required</div>
+          </div>
+          <div *ngIf="submitted && f.email.hasValidator(Validators.email) && f.email.invalid" 
+          class="form-group-input-validation">
+            <img src="img/warning.svg" alt="">
+            <div  style="margin-left: 5px;">part name is invalid</div>
+          </div>
+        </div>
+        
+   
+        
+        <div class="form-group">
+          <h4 class="registration-heading">Description</h4>        
+            <div class="description-area">
+              <textarea name="description" id="description" rows="8" ></textarea>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <div class="name-fields" >
+            <div class="name-field">
+              <label for="first-name">Brand</label>
+              <input type="text" id="first-name" formControlName="Brand" placeholder="Brand">
+              <div *ngIf="submitted && f.firstName.hasValidator(Validators.required) && f.firstName.invalid"
+                   class="form-group-input-validation">
+                   <img src="img/warning.svg" alt="">
+                <div style="margin-left: 5px;">brand name is required</div>
+              </div>
+            </div>
+            <div class="name-field" style="margin-left: 20px;">
+              <label for="last-name">Model</label>
+              <input type="text" id="last-name" formControlName="Model" required placeholder="Model">
+              <div *ngIf="submitted && f.lastName.hasValidator(Validators.required) && f.lastName.invalid" 
+              class="form-group-input-validation">
+                <img src="img/warning.svg" alt="">
+                <div style="margin-left: 5px;">model name is required</div>
+              </div>
+            </div>
+            <div class="name-field" style="margin-left: 20px;">
+              <label for="last-name">Year</label>
+              <input type="text" id="last-name" formControlName="Year" required placeholder="Year">
+              <div *ngIf="submitted && f.lastName.hasValidator(Validators.required) && f.lastName.invalid" 
+              class="form-group-input-validation">
+                <img src="img/warning.svg" alt="">
+                <div style="margin-left: 5px;">year name is required</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group-radio-btn">
+          <h4 class="registration-heading">Currency</h4>
+          <div class="title-fields">
+            <label>
+              <input type="radio" formControlName="title" value="euro"> Euro | €
+            </label>
+            <label>
+              <input type="radio" formControlName="title" value="libra"> Libra | £
+            </label>
+            <label>
+              <input type="radio" formControlName="title" value="dollar"> Dollar | $
+            </label>
+            <label>
+              <input type="radio" formControlName="title" value="real"> Real | R$
+            </label>
+          </div>
+          <div *ngIf="submitted && f.title.hasValidator(Validators.required) && f.title.invalid"
+          class="form-group-input-validation">
+            <img src="img/warning.svg" alt="">
+            <div style="margin-left: 5px;">currency is required</div>
+          </div>
+        </div>
+
+        <div class="form-group-radio-btn">
+          <h4 class="registration-heading">Price</h4>        
+            <div class="name-field">
+              <label for="price-number">Insert a price</label>
+              <input type="number" id="price-number" formControlName="price" placeholder="€320,00">
+              <div *ngIf="submitted && f.firstName.hasValidator(Validators.required) && f.firstName.invalid"
+                   class="form-group-input-validation">
+                   <img src="img/warning.svg" alt="">
+                <div style="margin-left: 5px;">price is required</div>
+              </div>
+          </div>
+        </div>
+
+      </form>
+    
+    
+      <div class="additional-row">
+        <a class="form-button blue lg" (click)="onSubmit()" href="javascript:void(0)">Save</a>
+      </div>
+  
+    </div>
+  </div>
+  <footer>
+    <div class="footer-left">
+      <img src="img/logo-footer.png" alt="Logo">
+    </div>
+    <div class="footer-right">
+      <a href="#">Contact</a>
+      <a href="#">Provider</a>
+      <a href="#">Legal Notices</a>
+      <a href="#">Data Protection</a>
+    </div>
+  </footer>
+  
